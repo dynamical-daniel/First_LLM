@@ -1,7 +1,7 @@
 # Transformer from Scratch — Amazon Food Reviews
 
 ## Contributors
-This project was developed to complete the first project in Math 598C - Large Language Models at Colorado School of Mines. I worked alongside  [@sddale] to independently, but in parallel, implement our own LLMs. We both discussed ideas for implementation and the theory behind the transformer architecture together. Implementation done separetly.
+This project was developed to complete the first project in Math 598C - Large Language Models @ Colorado School of Mines. I worked alongside  [@sddale] to independently, but in parallel, implement our own LLMs. We both discussed ideas for implementation and the theory behind the transformer architecture together. Implementation done separetly.
 
 ## Architecture Overview
 
