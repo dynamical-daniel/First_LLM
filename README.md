@@ -2,7 +2,7 @@
 
 A from-scratch implementation of a decoder-only Transformer language model (inspired by GPT), trained on the [Amazon Fine Food Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) dataset from Kaggle.
 
-The model is nicknamed **REMY** (after the rat from Ratatouille 🐀).
+The model is nicknamed **REMY** (after the rat from Ratatouille 🐀) and tested against his less-smart (untrained) brother EMILLE.
 
 ---
 
