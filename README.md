@@ -1,22 +1,7 @@
 # Transformer from Scratch — Amazon Food Reviews
 
-A from-scratch implementation of a decoder-only Transformer language model (inspired by GPT), trained on the [Amazon Fine Food Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) dataset from Kaggle.
-
-The model is nicknamed **REMY** (after the rat from Ratatouille 🐀) and is compaired against his less-smart (untrained) brother Emille.
-
----
-
-## Project Structure
-
-```
-.
-├── ImplementTransformer.ipynb   # Main notebook: model definition, training, generation
-├── test_transformer.py          # Pytest unit tests for all core components
-├── pyproject.toml               # uv project and dependency specification
-└── README.md                    # This file
-```
-
----
+## Contributors:
+This project was developed to complete the first project in Math 598C - Large Language Models at Colorado School of Mines. I worked along side Seth Dale, [@sddale], to independently, but in parallel, implement our own LLMs. We both discussed ideas for implementation and the theory behind the transformer architecture together, but implemented these ideas in code separetly.
 
 ## Architecture Overview
 
