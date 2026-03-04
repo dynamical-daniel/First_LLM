@@ -1,7 +1,7 @@
 # Transformer from Scratch — Amazon Food Reviews
 
 ## Contributors
-This project was developed to complete the first project in Math 598C - Large Language Models at Colorado School of Mines. I worked along side Seth Dale, [@sddale] https://github.com/sddale/transformer , to independently, but in parallel, implement our own LLMs. We both discussed ideas for implementation and the theory behind the transformer architecture together. Implementation done separetly.
+This project was developed to complete the first project in Math 598C - Large Language Models at Colorado School of Mines. I worked alongside  [@sddale] to independently, but in parallel, implement our own LLMs. We both discussed ideas for implementation and the theory behind the transformer architecture together. Implementation done separetly.
 
 ## Architecture Overview
 
@@ -27,21 +27,11 @@ The transformer is built from the following components:
 uv sync
 ```
 
-This reads `pyproject.toml`, creates a `.venv` in the project folder, and installs all dependencies. To run any command inside the environment, prefix it with `uv run`, or activate the venv manually:
-
-```bash
-# Option A — prefix commands (recommended)
-uv run jupyter notebook ImplementTransformer.ipynb
-uv run pytest test_transformer.py -v
-
-# Option B — activate manually
-source .venv/bin/activate        # macOS / Linux
-.venv\Scripts\activate           # Windows
-```
+This reads `pyproject.toml`, creates a `.venv` in the project folder, and installs all dependencies. 
 
 ### 3. Download the dataset
 
-The notebook uses `kagglehub` to access the Amazon Fine Food Reviews dataset. Follow [Kaggle's setup guide](https://www.kaggle.com/docs/api) to place your `kaggle.json` credentials file at `~/.kaggle/kaggle.json`.
+The notebook uses `kagglehub` to access the Amazon Fine Food Reviews dataset. You may follow [Kaggle's setup guide](https://www.kaggle.com/docs/api) to place your `kaggle.json` credentials file at `~/.kaggle/kaggle.json`.
 
 Then update the `data_path` variable in the notebook to point to where `kagglehub` downloads the data on your machine:
 
@@ -49,7 +39,7 @@ Then update the `data_path` variable in the notebook to point to where `kagglehu
 data_path = "path/to/Reviews.csv"
 ```
 
-Alternatively, download the CSV directly from [Kaggle](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) and set `data_path` accordingly.
+OR, download the CSV directly from [Kaggle](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) and set `data_path` accordingly.
 
 ### 4. Run the notebook
 
