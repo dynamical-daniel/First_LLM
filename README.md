@@ -21,11 +21,6 @@ The transformer is built from the following components:
 
 ### 1. Clone the repository
 
-```bash
-git clone <your-repo-url>
-cd <repo-folder>
-```
-
 ### 2. Create the virtual environment and install dependencies
 
 ```bash
