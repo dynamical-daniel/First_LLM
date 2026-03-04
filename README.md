@@ -72,7 +72,7 @@ Run all cells in the notebook. The notebook will:
 3. Build a word-level vocabulary, excluding the 1000 longest/rarest words
 4. Re-encode a 1/60th subset of the data with a fresh filtered vocabulary
 5. Define `config`, then instantiate and train `REMY` for 1 epoch
-6. Instantiate `UNTRAINED_EMILLE` with the same `config` as a random baseline
+6. Instantiate `UNTRAINED_EMILLE` with the same `config` as REMY
 7. Plot the training loss curve
 8. Generate text from both models and compare outputs
 
