@@ -102,6 +102,7 @@ Training: 1 epoch, batch size 32, AdamW lr=1e-2.
 After training `REMY` for 1 epoch:
 - Initial loss: ~11.1
 - Final loss: ~5.4–5.7
+<img width="562" height="455" alt="image" src="https://github.com/user-attachments/assets/61e229c5-8681-4de6-b219-59e18c88a4d7" />
 
 Sample generation with prompt `"my favorite food is"` and `max_new_tokens=50`:
 
