@@ -1,34 +1,16 @@
 # Transformer from Scratch — Amazon Food Reviews
 
-A from-scratch implementation of a decoder-only Transformer language model (inspired by GPT), trained on the [Amazon Fine Food Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) dataset from Kaggle.
+A vanilla transformer architecture LLM trained on the [Amazon Fine Food Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) dataset from Kaggle.
 
-The trained model is nicknamed **REMY** (after the rat from Ratatouille 🐀), and is compared against **UNTRAINED_EMILLE**, an uninitialized model with the same architecture used as a random baseline.
-
----
-
-## Project Structure
-
-```
-.
-├── ImplementTransformer.ipynb      # Main notebook: model, training, generation
-├── test_transformer.py             # Pytest unit tests for all core components
-├── pyproject.toml                  # uv project and dependency specification
-├── .github/
-│   └── workflows/
-│       └── ci.yml                  # GitHub Actions: runs tests on every push
-└── README.md                       # This file
-```
-
----
-
+The trained model is nicknamed **REMY** (after the rat from Ratatouille 🐀), and is compared against **UNTRAINED_EMILLE**.
 ## Architecture Overview
 
 | Class | Description |
 |---|---|
-| `Config` | Dataclass holding all hyperparameters |
-| `MLP` | Two-layer feedforward network with GELU activation |
-| `AttentionHead` | Single causal self-attention head with upper-triangular masking |
-| `TransformerBlock` | AttentionHead + MLP with residual connections |
+| `Config` | Configurable set of model hyperparameters |
+| `MLP` | Standard Multi-Layer Perceptron used to predict next word |
+| `AttentionHead` | Self-attention head with upper-triangular masking (no peeking!) |
+| `TransformerBlock` | AttentionHead + MLP |
 | `TransformerArchitecture` | Token embedding + positional embedding + N blocks + unembedding |
 
 ---
@@ -37,34 +19,16 @@ The trained model is nicknamed **REMY** (after the rat from Ratatouille 🐀), a
 
 ### 1. Clone the repository
 
-```bash
-git clone <your-repo-url>
-cd <repo-folder>
-```
-
 ### 2. Install uv and sync dependencies
-
-If you don't have [uv](https://docs.astral.sh/uv/) installed:
-
-```bash
-# macOS / Linux
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# or via pip
-pip install uv
-```
-
-Then install all project dependencies:
+Install all project dependencies:
 
 ```bash
 uv sync
 ```
 
-This creates a `.venv` in the project folder and installs everything declared in `pyproject.toml`.
-
 ### 3. Download the dataset
 
-The notebook uses `kagglehub` to download the Amazon Fine Food Reviews dataset. You will need a Kaggle account with an API key configured. Follow [Kaggle's API setup guide](https://www.kaggle.com/docs/api) to place your `kaggle.json` credentials at `~/.kaggle/kaggle.json`.
+The notebook uses `kagglehub` to download the Amazon Fine Food Reviews dataset. Follow [Kaggle's API setup guide](https://www.kaggle.com/docs/api). OR,
 
 Cell 3 of the notebook runs the download:
 
@@ -87,11 +51,9 @@ C:\Users\<your-username>\.cache\kagglehub\datasets\snap\amazon-fine-food-reviews
 After running the download cell, **edit the `data_path` variable in Cell 4** to match the path printed by `kagglehub` on your machine, pointing to `Reviews.csv`:
 
 ```python
-# Example — replace with your actual path
+# Replace with your actual path
 data_path = "/home/<your-username>/.cache/kagglehub/datasets/snap/amazon-fine-food-reviews/versions/2/Reviews.csv"
 ```
-
-The current value in the notebook is the original author's local Windows path and **will not work on your machine without this change.**
 
 ### 5. Run the notebook
 
@@ -99,7 +61,7 @@ The current value in the notebook is the original author's local Windows path an
 uv run jupyter notebook ImplementTransformer.ipynb
 ```
 
-Run all cells from top to bottom. The notebook will:
+Run all cells in the notebook. The notebook will:
 1. Download the dataset (Cell 3) and load `Reviews.csv` from `data_path` (Cell 4)
 2. Clean and preprocess the review text
 3. Build a word-level vocabulary, excluding the 1000 longest/rarest words
@@ -148,27 +110,7 @@ my favorite food is four foamer foamer crosscontamination schmoo foamer four sch
 
 ---
 
-## Running the Tests
+## Conclusion
+My trained LLM did not produce the greatest response. I believe this from prioritizing manageable training times (no more than 20 minutes, with trainings usually taking from 10 - 15 minutes). More work could have been done to preprocess the data. The data is messy with typos and unique tokens that expand the size of the vocabulary. 
 
-The test suite covers all components and runs **without requiring the dataset**.
-
-```bash
-uv run pytest test_transformer.py -v
-```
-
-Tests cover: `Config` fields, `MLP` shapes, `AttentionHead` causal masking, `TransformerBlock` residuals, `TransformerArchitecture` output shape, `process_text` / `tokenize` behavior, `StackEncodedData`, `GetDataLoader`, and the `train` loop.
-
----
-
-## Continuous Integration
-
-Tests run automatically on every push and pull request via GitHub Actions (see `.github/workflows/ci.yml`). Results are visible under the **Actions** tab of the repository.
-
----
-
-## Requirements
-
-- [uv](https://docs.astral.sh/uv/) for environment and dependency management
-- Python 3.12 (fetched automatically by uv if not present)
-- A [Kaggle account](https://www.kaggle.com) with API credentials for dataset download
-- All Python dependencies are declared in `pyproject.toml` and installed via `uv sync`
+There are many features of an LLM that can likely improve performance from a structural standpoint instead of just tuning hyperparameters.
