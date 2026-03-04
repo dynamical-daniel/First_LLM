@@ -3,6 +3,10 @@
 A vanilla transformer architecture LLM trained on the [Amazon Fine Food Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) dataset from Kaggle.
 
 The trained model is nicknamed **REMY** (after the rat from Ratatouille 🐀), and is compared against **UNTRAINED_EMILLE**.
+
+## Collaborators
+This project was completed to fulfill project 1 of Math 598C - Large Language Models @ Colorado School of Mines. I collaborated with [@sddale] throughout the entirety of the project. We both shared ideas for implementation and discussed the theory of the architecture of our models. We discussed issues we faced preprocessing the data and creating our own training set. Implementation of the models was accomplished independently.
+
 ## Architecture Overview
 
 | Class | Description |
