@@ -41,7 +41,7 @@ source .venv/bin/activate        # macOS / Linux
 
 ### 3. Download the dataset
 
-The notebook uses `kagglehub` to access the Amazon Fine Food Reviews dataset. You need a Kaggle account and API key configured. Follow [Kaggle's setup guide](https://www.kaggle.com/docs/api) to place your `kaggle.json` credentials file at `~/.kaggle/kaggle.json`.
+The notebook uses `kagglehub` to access the Amazon Fine Food Reviews dataset. Follow [Kaggle's setup guide](https://www.kaggle.com/docs/api) to place your `kaggle.json` credentials file at `~/.kaggle/kaggle.json`.
 
 Then update the `data_path` variable in the notebook to point to where `kagglehub` downloads the data on your machine:
 
