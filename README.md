@@ -4,40 +4,13 @@ A from-scratch implementation of a decoder-only Transformer language model (insp
 
 The model is nicknamed **REMY** (after the rat from Ratatouille 🐀) and tested against his less-smart (untrained) brother EMILLE.
 
----
-
-## Project Structure
-
-```
-.
-├── ImplementTransformer.ipynb   # Main notebook: model definition, training, generation
-├── test_transformer.py          # Pytest unit tests for all core components
-├── environment.yaml             # Conda environment specification
-└── README.md                    # This file
-```
-
----
-
-## Architecture Overview
-
-The transformer is built from the following components:
-
-| Class | Description |
-|---|---|
-| `Config` | Dataclass holding all hyperparameters |
-| `MLP` | Two-layer feedforward network with GELU activation |
-| `AttentionHead` | Single causal self-attention head with masking |
-| `TransformerBlock` | One attention head + MLP with residual connections |
-| `TransformerArchitecture` | Full model: token embedding + positional embedding + N blocks + unembedding |
-
----
 
 ## Setup & Reproduction
 
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone (https://github.com/dynamical-daniel/First_LLM)
 cd <repo-folder>
 ```
 
