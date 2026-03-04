@@ -111,6 +111,6 @@ my favorite food is four foamer foamer crosscontamination schmoo foamer four sch
 ---
 
 ## Conclusion
-My trained LLM did not produce the greatest response. I believe this from prioritizing manageable training times (no more than 20 minutes, with trainings usually taking from 10 - 15 minutes). More work could have been done to preprocess the data. The data is messy with typos and unique tokens that expand the size of the vocabulary. 
+My trained LLM did not produce the greatest response. I believe this is from prioritizing manageable training times (no more than 20 minutes, with trainings usually taking from 10 - 15 minutes). More work could have been done to preprocess the data. The data is messy with typos and unique tokens that quickly expand the size of the vocabulary. 
 
-There are many features of an LLM that can likely improve performance from a structural standpoint instead of just tuning hyperparameters.
+There are many strucural changes that can be made to the LLM to likely improve performance more so than just hyperparameter tuning.
