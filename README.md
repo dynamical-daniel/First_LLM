@@ -18,6 +18,7 @@ The trained model is nicknamed **REMY** (after the rat from Ratatouille 🐀), a
 ## Setup & Reproduction
 
 ### 1. Clone the repository
+Everyone can do this.
 
 ### 2. Install uv and sync dependencies
 Install all project dependencies:
