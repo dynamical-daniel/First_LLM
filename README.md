@@ -22,7 +22,7 @@ This project was completed to fulfill project 1 of Math 598C - Large Language Mo
 ## Setup & Reproduction
 
 ### 1. Clone the repository
-Everyone can do this.
+Anyone can do this.
 
 ### 2. Install uv and sync dependencies
 Install all project dependencies:
