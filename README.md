@@ -107,10 +107,10 @@ Sample generation with prompt `"my favorite food is"` and `max_new_tokens=50`:
 
 ```
 # REMY (trained)
-my favorite food is the best . i have been using this for a long time and it is ...
+my favorite food is samples artificial samples samples food know samples food know samples samples samples food know samples samples food fun whole premium i artificial samples labrador samples without know samples samples samples food know samples fun samples four food know samples crispy food know samples samples samples fun samples four food samples
 
-# UNTRAINED_EMILLE (random baseline)
-my favorite food is four foamer foamer crosscontamination schmoo foamer four schmoo ...
+# UNTRAINED_EMILLE
+my favorite food is four four four four four four four four four four four four four four four four four four four confusion four four four four four four confusion four four four four four four four four four confusion four four confusion four four four confusion four four four four four four
 ```
 
 ---
